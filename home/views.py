@@ -6,13 +6,16 @@ def index(request):
         'variable': "this is a variable text",
     }
     return render(request, 'index.html', context)
-    # return HttpResponse("This is About")
+    # return HttpResponse("This is Home")
 
 def about(request):
-    return HttpResponse("This is About")
+    return render(request, 'index.html', context)
+    # return HttpResponse("This is About")
 
 def services(request):
-    return HttpResponse("This is Services")
+    return render(request, 'index.html', context)
+    # return HttpResponse("This is Services")
 
 def contact(request):
-    return HttpResponse("This is Contact")
+    return render(request, 'index.html', context)
+    # return HttpResponse("This is Contact")
