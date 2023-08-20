@@ -17,7 +17,12 @@ from django.contrib import admin
 from django.urls import path
 from home import views
 
+admin.site.site_header = "Khyati Bakes Admin"
+admin.site.site_title = "Khyati Bakes Admin Portal"
+admin.site.index_title = "Welcome to Khyati Bakes Researcher Portal"
+
 urlpatterns = [
+    path('admin', admin.site.urls),
     path("", views.index, name='home'),
     path("about", views.about, name='about'),
     path("services", views.services, name='services'),
